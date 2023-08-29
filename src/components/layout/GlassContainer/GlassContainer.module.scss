@@ -1,0 +1,12 @@
+@import '../../../styles/variables';
+
+.container {
+	border-radius: 1.5rem;
+	box-sizing: border-box;
+	background-color: $bg-color;
+	box-shadow: $border-shadow;
+	border-top: $border-light;
+	border-left: $border-light;
+	backdrop-filter: blur(0.4rem);
+	will-change: transform, opacity;
+}

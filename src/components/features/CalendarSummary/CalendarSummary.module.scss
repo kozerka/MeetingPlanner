@@ -1,0 +1,33 @@
+@import '../../../styles/variables';
+
+.container{
+    grid-area: calendarSummary;
+    overflow: hidden;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.title{
+    font-size: 1.4rem;
+    padding: 0.6rem;
+}
+.text{
+    font-size: 0.8rem;
+   
+}
+.alert{
+    font-size: 0.8rem;
+    text-shadow: $text-shadow;
+    text-transform: uppercase;
+    padding: 1rem;
+    &--negative{
+        background-color: $alert-color;
+        padding: 0.3rem 1rem;
+        border-radius: 0.8rem;
+        margin-top: 0.5rem;
+    }
+}
+

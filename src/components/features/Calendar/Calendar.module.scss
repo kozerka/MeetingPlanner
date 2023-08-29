@@ -1,0 +1,34 @@
+@import '../../../styles/variables';
+.calendar {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	grid-template-rows: 1.5fr 1fr 0.5fr;
+	gap: 1rem 1rem;
+	grid-template-areas:
+		'calendarForm calendarList'
+		'autocomplete calendarList'
+		'display calendarSummary';
+	margin: 0.5rem 1.5rem;
+	padding: 1.5rem;
+	width:90%;
+}
+
+@media (max-width:68rem){
+	.calendar {
+		width:100%;
+	}
+}
+@media (max-width:62rem){
+	.calendar {
+		display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1.5fr 1fr 2.62fr 0.5fr 0.5fr ;
+	gap: 1rem 1rem;
+	grid-template-areas:
+		'calendarForm'
+		'autocomplete' 
+		'calendarList'
+		'calendarSummary'
+		'display'
+	}
+}

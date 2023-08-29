@@ -1,0 +1,52 @@
+@import '../../../styles/variables';
+.randomButton {
+	background-color: $button-color;
+	box-shadow: $border-shadow;
+	border-radius: 1rem;
+	overflow: hidden;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: $text-color;
+	padding: 0.6rem 0.8rem;
+	border: none;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	align-self: center;
+	user-select: none;
+	position: relative;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+	margin-top:1rem;
+	&:hover,
+	&:active {
+			background-position: 0 50%;
+			background: $bg-color;
+			box-shadow: $box-shadow;
+	}
+	&--delete{
+		padding:0.6rem 1rem;
+		font-size: 0.8rem;
+		margin: 1rem;
+		width: 4rem;
+	}
+	&--small {
+		padding: 0.4rem;
+		font-size: 0.8rem;
+	}
+	&--round {
+		width: 2.2rem;
+		height: 2.2rem;
+		margin: 1rem;
+		border-radius: 50%;
+		box-shadow: 0 1px 3px 0px rgba(#0f0f0f, 0.5), inset 0 1px rgba(#fff, 0.2);
+		
+	}
+	&--active{background-position: 0 50%;
+			background: $bg-color;
+			box-shadow: $box-shadow;
+			color: $white;
+			margin: 1rem;
+
+	}
+}
+

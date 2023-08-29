@@ -1,0 +1,87 @@
+@import '../../../styles/variables';
+.container {
+	display: flex;
+	position: relative;
+	padding: 0.35rem 0;
+	color: $white;
+	width: 15rem;
+	margin: 0 auto;
+	border-bottom: $border-bottom;
+	&:first-of-type {
+		padding-top: 0;
+	}
+	&:last-of-type {
+		padding-bottom: 0;
+	}
+}
+.input {
+	background-color: transparent;
+	color: $white;
+	padding: 0 1.5rem 0 0.5rem;
+	cursor: pointer;
+	border: none;
+	transition: all 0.3s ease;
+	line-height: 2rem;
+	display: block;
+	min-width: 8.75rem;
+	width: 100%;
+	overflow: hidden;
+	font-size: 1rem;
+	&::placeholder {
+		color: $white;
+	}
+	&:focus {
+		outline: none;
+		background-color: transparent;
+		color: $white;
+	}
+	&:not(:placeholder-shown) + .label {
+		opacity: 1;
+		transform: translateY(-0.65rem);
+		color: $white;
+		font-weight: bold;
+		background-color: transparent;
+	}
+	&[type='date'] + .label {
+		display: none;
+		color: $white;
+	}
+}
+
+.label {
+	position: absolute;
+	font-size: 0.55rem;
+	text-transform: uppercase;
+	display: block;
+	top: 0;
+	left: 0.5rem;
+	opacity: 0;
+	transform-origin: left center;
+	transition: all 0.3s ease;
+	pointer-events: none;
+}
+.input[type='date']::-webkit-calendar-picker-indicator {
+	opacity: 0;
+	position: absolute;
+	right: 0;
+	width: 1.44rem;
+	height: 1.44rem;
+	cursor: pointer;
+	padding-right: 1.875rem;
+}
+.input[type='date'] {
+	background-image: url(../../../assets/img/calendarIcon.png);
+	background-position: 12.5rem center;
+	background-repeat: no-repeat;
+	background-size: 1.125rem;
+	padding-right: 1.875;
+	position: relative;
+}
+
+.input:-webkit-autofill,
+.input.input:-webkit-autofill:hover,
+.input.input:-webkit-autofill:focus,
+.input.input:-webkit-autofill:active {
+	-webkit-text-fill-color: $white;
+	transition:background-color 5000s ease-in-out 0s;
+}
